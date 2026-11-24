@@ -1,0 +1,254 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #141414;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background: #080808;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 28px;
+}
+
+.logo span {
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #e50914;
+}
+
+#searchInput {
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+}
+
+.hero {
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    padding: 50px 7%;
+    background:
+        linear-gradient(90deg, #000 10%, rgba(0,0,0,.35)),
+        url("https://picsum.photos/seed/tamilcinema/1400/600")
+        center/cover no-repeat;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #b20710;
+}
+
+main {
+    padding: 35px 5%;
+    min-height: 300px;
+}
+
+main h2 {
+    margin-bottom: 25px;
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 22px;
+}
+
+.movie-card {
+    background: #242424;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.movie-card:hover {
+    transform: scale(1.04);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    background: #333;
+}
+
+.movie-info {
+    padding: 12px;
+}
+
+.movie-info h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.movie-info p {
+    color: #bbb;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.movie-info button {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+.watch-button {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    background: #f5f5f5;
+    color: #111;
+}
+
+.watch-button:hover {
+    background: #ddd;
+}
+
+.trailer-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.88);
+}
+
+.trailer-modal.is-open {
+    display: flex;
+}
+
+.trailer-dialog {
+    position: relative;
+    width: min(900px, 100%);
+    padding: 20px;
+    border-radius: 8px;
+    background: #111;
+}
+
+.trailer-dialog h2 {
+    padding-right: 45px;
+    margin-bottom: 15px;
+}
+
+.trailer-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    font-size: 28px;
+    line-height: 38px;
+}
+
+.trailer-frame {
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.trailer-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#youtubeLink {
+    display: inline-block;
+    margin-top: 12px;
+    color: white;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+footer {
+    background: #080808;
+    text-align: center;
+    padding: 25px;
+    color: #aaa;
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .hero-content h2 {
+        font-size: 30px;
+    }
+}
+
+.movie-card {
+    background: #242424;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    background: #333;
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 22px;
+}

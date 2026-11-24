@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TamilFlix | Tamil Entertainment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h1 class="logo">TAMIL<span>FLIX</span></h1>
+
+    <nav>
+        <a href="#" data-filter="All">Home</a>
+        <a href="#" data-filter="Movies">Movies</a>
+        <a href="#" data-filter="TV Shows">TV Shows</a>
+        <a href="#" data-filter="Web Series">Web Series</a>
+        <a href="#" data-filter="My List">My List</a>
+    </nav>
+
+    <input type="text" id="searchInput" placeholder="Search titles...">
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Welcome to TamilFlix</h2>
+        <p>Discover Tamil movies, television shows and web series.</p>
+        <button onclick="showAll()">Explore Now</button>
+    </div>
+</section>
+
+<main id="content">
+    <h2 id="sectionTitle">Popular Tamil Entertainment</h2>
+    <div id="movieContainer" class="movie-container"></div>
+</main>
+
+<div id="trailerModal" class="trailer-modal" aria-hidden="true">
+    <div class="trailer-dialog" role="dialog" aria-modal="true" aria-labelledby="trailerTitle">
+        <button type="button" id="closeTrailer" class="trailer-close" aria-label="Close trailer">&times;</button>
+        <h2 id="trailerTitle"></h2>
+        <div id="trailerFrame" class="trailer-frame"></div>
+        <a id="youtubeLink" href="#" target="_blank" rel="noopener noreferrer">Open trailer on YouTube</a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 TamilFlix | Unofficial Front-End Learning Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
